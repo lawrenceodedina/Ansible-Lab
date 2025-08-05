@@ -1,0 +1,266 @@
+# Git Complete Tutorial: From Basics to Advanced
+
+## 1. Introduction to Git
+
+Git is a distributed version control system (VCS) used for tracking changes in source code. It helps teams collaborate and maintain a history of modifications.
+
+### Why Use Git?
+
+- Tracks code changes
+- Enables collaboration
+- Allows branching and merging
+- Provides a backup of code
+
+## 2. Installing Git
+
+### Windows
+
+1. Download Git from [git-scm.com](https://git-scm.com/downloads)
+2. Run the installer with default settings
+3. Verify installation:
+   ```sh
+   ```
+
+git --version
+
+````
+
+### Linux (Ubuntu/Debian-based systems)
+```sh
+sudo apt update
+sudo apt install git
+````
+
+### Mac (Using Homebrew)
+
+```sh
+brew install git
+```
+
+## 3. Basic Git Configuration
+
+After installation, configure Git with your name and email:
+
+```sh
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
+
+To check configuration:
+
+```sh
+git config --list
+```
+
+## 4. Initializing a Git Repository
+
+To start tracking a project:
+
+```sh
+git init
+```
+
+To check the repository status:
+
+```sh
+git status
+```
+
+## 5. Adding and Committing Changes
+
+### Adding Files to Staging Area
+
+```sh
+git add filename
+```
+
+Or add all files:
+
+```sh
+git add .
+```
+
+### Committing Changes
+
+```sh
+git commit -m "Your commit message"
+```
+
+## 6. Working with Branches
+
+### Creating a Branch
+
+```sh
+git branch branch_name
+```
+
+### Switching to a Branch
+
+```sh
+git checkout branch_name
+```
+
+Or using:
+
+```sh
+git switch branch_name
+```
+
+### Creating and Switching to a Branch in One Command
+
+```sh
+git checkout -b new_branch
+```
+
+### Merging Branches
+
+```sh
+git checkout main
+git merge branch_name
+```
+
+## 7. Working with Remote Repositories (GitHub, GitLab, Bitbucket, etc.)
+
+### Adding a Remote Repository
+
+```sh
+git remote add origin https://github.com/your_username/repository.git
+```
+
+### Pushing Changes to Remote Repository
+
+```sh
+git push -u origin main
+```
+
+### Cloning a Repository
+
+```sh
+git clone https://github.com/user/repository.git
+```
+
+### Fetching and Pulling Changes
+
+```sh
+git fetch origin
+git pull origin main
+```
+
+## 8. Handling Merge Conflicts
+
+If two people edit the same file, Git may ask you to resolve conflicts manually.
+
+1. Open the file in an editor.
+2. Look for conflict markers (`<<<<<<`, `======`, `>>>>>>`).
+3. Edit the file to keep the desired changes.
+4. Add and commit the resolved file:
+   ```sh
+   git add resolved_file
+   git commit -m "Resolved merge conflict"
+   ```
+
+## 9. Undoing Changes
+
+### Undo Last Commit (But Keep Changes)
+
+```sh
+git reset --soft HEAD~1
+```
+
+### Undo Last Commit (And Remove Changes)
+
+```sh
+git reset --hard HEAD~1
+```
+
+### Reverting a Commit (Preserve History)
+
+```sh
+git revert commit_hash
+```
+
+## 10. Stashing Changes
+
+To save changes without committing:
+
+```sh
+git stash
+```
+
+To apply stashed changes:
+
+```sh
+git stash apply
+```
+
+To remove a stash:
+
+```sh
+git stash drop
+```
+
+## 11. Git Log and History
+
+### View Commit History
+
+```sh
+git log
+```
+
+### View Commit History in One Line
+
+```sh
+git log --oneline
+```
+
+## 12. Tagging Releases
+
+To create a tag:
+
+```sh
+git tag v1.0
+```
+
+To push tags to a remote repository:
+
+```sh
+git push origin --tags
+```
+
+## Why Use Git?
+
+Git is the most widely used **version control system (VCS)** because of its **speed, distributed nature, and robust branching model**.
+
+### Key Benefits of Git:
+
+- **Version Control** – Tracks changes and allows you to revert to previous versions if needed.
+- **Collaboration** – Enables multiple developers to work on the same codebase without conflicts.
+- **Branching & Merging** – Git makes it easy to create and manage feature branches.
+- **Distributed System** – Every developer has a complete copy of the project, allowing offline work.
+- **Security** – Uses cryptographic methods (SHA-1) to track changes securely.
+- **Efficiency & Performance** – Handles large projects efficiently.
+- **Integration with DevOps & CI/CD** – Works seamlessly with **Jenkins, GitHub Actions, GitLab CI, and Bitbucket Pipelines**.
+- **Popular Cloud Hosting Options** – Works with GitHub, GitLab, Bitbucket, and AWS CodeCommit.
+- **Industry Standard** – The **most commonly used version control system in software development**.
+
+### Market Share & Industry Adoption
+
+- **90% of developers** use Git for version control (Stack Overflow Developer Survey).
+- **87% of DevOps teams** rely on Git for source code management (State of DevOps Report).
+- **95% of Fortune 500 companies** use GitHub or Git-based repositories.
+
+### Alternatives to Git & Market Share
+
+| Version Control System | Market Share | Used By                                            |
+| ---------------------- | ------------ | -------------------------------------------------- |
+| **Git**                | \~90%        | Google, Microsoft, Facebook, Amazon, Netflix, etc. |
+| Subversion (SVN)       | \~4%         | Legacy enterprise projects, Apache projects        |
+| Mercurial              | \~2%         | Some open-source projects, Facebook (previously)   |
+| Perforce (Helix Core)  | \~3%         | Gaming & large enterprises (e.g., Ubisoft, EA)     |
+
+### Conclusion
+
+If you're working in **DevOps, software development, or cloud-based projects**, Git is **essential**. It's used by nearly every company developing software, from **startups to tech giants** like **Google, Microsoft, and Facebook**.
+
+
+
